@@ -12,14 +12,14 @@ header {
   background-color: #F0F8FF;
   color: rgb(34, 34, 113);
   padding: 10px 0;
-  font-size: 30px;
+  font-size: 1.875rem; /* 30px */
 }
 
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -32,7 +32,7 @@ header nav h1 {
 header nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 1.25rem; /* 20px */
 }
 
 header nav ul li {
@@ -42,7 +42,7 @@ header nav ul li {
 header nav ul li a {
   color: rgb(34, 34, 113);
   text-decoration: none;
-  font-size: 30px;
+  font-size: 1.875rem; /* 30px */
   font-weight: 700;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -60,7 +60,7 @@ header nav ul li a:hover {
   text-align: center;
   position: relative;
   overflow: hidden;
-  font-size: 30px;
+  font-size: 1.875rem; /* 30px */
 }
 
 #hero .hero_content {
@@ -68,7 +68,7 @@ header nav ul li a:hover {
 }
 
 #hero h1 {
-  font-size: 3.5em;
+  font-size: 3.5rem; /* 56px */
   font-weight: bold;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -91,7 +91,7 @@ header nav ul li a:hover {
   display: flex;
   justify-content: space-between;
   margin: 20px auto;
-  width: 85%;
+  width: 90%;
 }
 
 /* Main Content */
@@ -117,7 +117,7 @@ header nav ul li a:hover {
 }
 
 .sidebar h2 {
-  font-size: 30px;
+  font-size: 1.875rem; /* 30px */
   margin-bottom: 15px;
   color: navy;
 }
@@ -132,7 +132,7 @@ header nav ul li a:hover {
 }
 
 .sidebar ul li a {
-  font-size: 25px;
+  font-size: 1.5625rem; /* 25px */
   text-decoration: none;
   color: black;
   font-weight: 500;
@@ -153,7 +153,7 @@ header nav ul li a:hover {
   display: flex;
   justify-content: space-between;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-size: 25px;
+  font-size: 1.5625rem; /* 25px */
 }
 
 .h-card:hover, .v-card:hover {
@@ -231,7 +231,7 @@ footer ul li a {
   color: blue;
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
-  font-size: 30px;
+  font-size: 1.875rem; /* 30px */
 }
 
 footer ul li a:hover {
@@ -240,9 +240,26 @@ footer ul li a:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+
+/* Tablets and Small Desktops (min-width: 768px) */
+@media (max-width: 1200px) {
   .content-wrapper {
-    flex-direction: column;
+    width: 95%;
+  }
+
+  header nav {
+    width: 95%;
+  }
+}
+
+/* Medium Tablets and Large Phones (max-width: 992px) */
+@media (max-width: 992px) {
+  header {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  header nav ul li a {
+    font-size: 1.5rem; /* 24px */
   }
 
   .sidebar {
@@ -250,11 +267,74 @@ footer ul li a:hover {
     margin-top: 20px;
   }
 
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .main-content {
+    margin-bottom: 20px;
+  }
+}
+
+/* Small Phones (max-width: 768px) */
+@media (max-width: 768px) {
+  #hero {
+    padding: 40px 10px;
+  }
+
+  #hero h1 {
+    font-size: 2.5rem; /* 40px */
+  }
+
+  header nav ul li a {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .h-card, .v-card {
+    flex-direction: column;
+    font-size: 1.25rem; /* 20px */
+  }
+
   .h-card img, .v-card img {
     max-width: 100%;
   }
 
+  .sidebar h2 {
+    font-size: 1.5rem; /* 24px */
+  }
+
+  .sidebar ul li a {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  footer ul li a {
+    font-size: 1.5rem; /* 24px */
+  }
+}
+
+/* Extra Small Phones (max-width: 576px) */
+@media (max-width: 576px) {
+  header {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  header nav ul li a {
+    font-size: 1.125rem; /* 18px */
+  }
+
   #hero h1 {
-    font-size: 2.5em;
+    font-size: 2rem; /* 32px */
+  }
+
+  .sidebar h2 {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .sidebar ul li a {
+    font-size: 1rem; /* 16px */
+  }
+
+  footer ul li a {
+    font-size: 1.25rem; /* 20px */
   }
 }
