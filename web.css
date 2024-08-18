@@ -192,8 +192,8 @@ header nav ul li a:hover {
 }
 
 .read-btn {
-  background-color: lightblue;
-  color: black;
+  background-color: black;
+  color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
